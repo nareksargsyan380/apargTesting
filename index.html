@@ -9,14 +9,27 @@
 </head>
 <body>
   <!-- Search Area -->
-  <input id="myInput" type="text" placeholder="Search..">
+<div class="intro">
+  <h2>Choose which car photos you want to see in search results: Mercedes or Bentley?</h2>
+  <input id="myInput" type="text" placeholder="Search mercedes or bentley..">
+  <button class="searchBtn" id="searchBtn"">Search</button>
+</div>
 
 
   <!-- Pictures Container -->
-<div class="" id="flickr"></div>
+<div id="flickr" class="flick">
+  <div class="merc"></div>
+  <div class="bent"></div>
+</div>
 
-<div id="mercedes">Mercedes</div>
-<div id="bentley">Bentley</div>
+<div class="carBrands">
+  <div id="mercedes">Mercedes</div>
+  <div id="bentley">Bentley</div>
+</div>
+
+<div class="result">
+  <h2>Choosen car photos:</h2>
+</div>
   <script src="files/js/js.js"></script>
 </body>
 </html>
