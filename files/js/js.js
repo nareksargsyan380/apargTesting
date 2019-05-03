@@ -41,11 +41,12 @@ if(document.getElementById("myInput").value == "mercedes"){
           $.each(data.items, function(index, item) {
             console.log(item);
             $("<img>").attr("src", item.media.m).appendTo(".bent");
-            $("img").draggable({helper: "clone"});
+            $("img").draggable();
             $("#bentley").droppable(
               {
                 drop: function(ev, ui) {
-                  var droppedItem = $(ui.draggable.clone());
+                  var droppedItem = $(ui.draggable);
+                  droppedItem.css("position", "static");
                   droppedItem.appendTo(".result");
     },
     activate: function() {

@@ -53,12 +53,10 @@ h2{
   overflow: hidden;
   margin-bottom: 50px;
 }
-.merc, .bent{
-}
 #mercedes, #bentley{
   margin-top: 50px;
   width: 400px;
-  height: 50px;
+  height: 120px;
   background: #3e4048;
   text-align: center;
   font-size: 28px;
