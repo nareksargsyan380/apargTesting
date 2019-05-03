@@ -17,6 +17,7 @@ if(document.getElementById("myInput").value == "mercedes"){
             console.log(item);
             $("<img>").attr("src", item.media.m).appendTo(".merc");
             $("img").draggable();
+            $("#mercedes").droppable();
             if(index == 4) {
               return false;
             }
@@ -40,7 +41,23 @@ if(document.getElementById("myInput").value == "mercedes"){
           $.each(data.items, function(index, item) {
             console.log(item);
             $("<img>").attr("src", item.media.m).appendTo(".bent");
-            $("img").draggable();
+            $("img").draggable({helper: "clone"});
+            $("#bentley").droppable(
+              {
+                drop: function(ev, ui) {
+                  var droppedItem = $(ui.draggable.clone());
+                  droppedItem.appendTo(".result");
+    },
+    activate: function() {
+        $('#bentley').css({
+            border: "medium double green",
+            backgroundColor: "lightGreen"
+        });
+    },
+    deactivate: function() {
+        $('#bentley').css("border", "").css("background-color", "");
+    }
+});
             if(index == 4) {
               return false;
             }

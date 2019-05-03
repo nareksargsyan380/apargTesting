@@ -80,3 +80,10 @@ h2{
 .result{
   height: 300px;
 }
+.result img{
+  width: 270px;
+  height: 240px;
+  border-radius: 3px;
+  border: 1px solid red;
+  margin-right: 20px;
+}
