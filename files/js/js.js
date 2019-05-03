@@ -17,7 +17,28 @@ if(document.getElementById("myInput").value == "mercedes"){
             console.log(item);
             $("<img>").attr("src", item.media.m).appendTo(".merc");
             $("img").draggable();
-            $("#mercedes").droppable();
+            $("#mercedes").droppable(
+              {
+                drop: function(ev, ui) {
+                  var droppedItem = $(ui.draggable);
+                  droppedItem.css("position", "static");
+                  droppedItem.appendTo(".result");
+                  $(document).ready(function message(){
+                    if($('.result img').length == 5){
+                    alert("You are succesfully sorted photos by brands..!");
+                    }
+                  })
+    },
+    activate: function() {
+        $('#mercedes').css({
+            border: "medium double green",
+            backgroundColor: "lightGreen"
+        });
+    },
+    deactivate: function() {
+        $('#mercedes').css("border", "").css("background-color", "");
+    }
+});
             if(index == 4) {
               return false;
             }
@@ -48,6 +69,11 @@ if(document.getElementById("myInput").value == "mercedes"){
                   var droppedItem = $(ui.draggable);
                   droppedItem.css("position", "static");
                   droppedItem.appendTo(".result");
+                  $(document).ready(function message(){
+                    if($('.result img').length == 5){
+                    alert("You are succesfully sorted photos by brands..!");
+                    }
+                  })
     },
     activate: function() {
         $('#bentley').css({
@@ -70,8 +96,16 @@ if(document.getElementById("myInput").value == "mercedes"){
 
 }else{
   alert("Please enter mercedes or bentley with lowercase")};
-
-
 }
 // search clicking
 document.getElementById("searchBtn").onclick = someFunc;
+
+// message after sorting
+$(document).ready(function message(){
+  if($('.result img').length == 5){
+  alert("You are succesfully sorted photos by brands..!");
+  }
+})
+// if($('.result img').length == 5){
+// alert("You are succesfully sorted photos by brands..!");
+// }

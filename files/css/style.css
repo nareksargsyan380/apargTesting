@@ -59,11 +59,11 @@ h2{
   height: 120px;
   background: #3e4048;
   text-align: center;
-  font-size: 28px;
+  font-size: 42px;
   border: 2px solid red;
   border-radius: 8px;
   color: white;
-  padding-top: 15px;
+  padding-top: 30px;
   cursor: pointer;
 }
 #mercedes{
