@@ -3,39 +3,34 @@
 <head>
   <meta charset="utf-8">
   <title>Aparg Testing</title>
-  <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="files/css/style.css" type="text/css">
-  <!-- <script src="files/js/jquery-3.3.1.min.js"></script>
-  <script src="files/js/jquery-ui.min.css"></script>
-  <link rel="stylesheet" href="files/css/jquery-ui.min.css"> -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+  <script src="files/js/jquery-3.3.1.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 </head>
 <body>
   <!-- Search Area -->
-<div class="intro">
-  <h2>Choose which car photos you want to see in search results: Mercedes or Bentley?</h2>
-  <input id="myInput" type="text" placeholder="Search mercedes or bentley..">
-  <button class="searchBtn" id="searchBtn"">Search</button>
-</div>
-
+    <div class="intro">
+      <h2>Choose which car photos you want to see in search results: Mercedes or Bentley?</h2>
+      <input id="myInput" type="text" placeholder="Search mercedes or bentley..">
+      <button class="searchBtn" id="searchBtn"">Search</button>
+    </div>
 
   <!-- Pictures Container -->
-<div id="flickr" class="flick">
-  <div class="merc"></div>
-  <div class="bent"></div>
-</div>
+    <div id="flickr" class="flick">
+      <div class="merc"></div>
+      <div class="bent"></div>
+    </div>
 
-<div class="carBrands">
-  <div id="mercedes">Mercedes</div>
-  <div id="bentley">Bentley</div>
-</div>
+    <div class="carBrands">
+      <div id="mercedes" onclick="showPics()">Mercedes</div>
+      <div id="bentley" onclick="showPics()">Bentley</div>
+    </div>
+  <!-- making the photos box -->
+    <div class="result">
+    <h2>Group photos:</h2>
+    </div>
 
-<div class="result">
-<h2>Group photos:</h2>
-</div>
-
-  <script src="files/js/js.js"></script>
+<script src="files/js/js.js"></script>
 </body>
 </html>

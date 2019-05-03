@@ -32,7 +32,6 @@ h2{
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.21);
   outline: aliceblue;
 }
-}
 #flickr{
   width: 75%;
   padding: 70px;
@@ -76,6 +75,7 @@ h2{
   margin-right: 40px;
 }
 .result{
+  display: none;
   height: 300px;
 }
 .result img{
@@ -84,4 +84,15 @@ h2{
   border-radius: 3px;
   border: 1px solid red;
   margin-right: 20px;
+}
+/* media requests */
+@media only screen and (max-width: 912px){
+  #mercedes, #bentley{
+    width: 270px;
+  }
+}
+@media only screen and (max-width: 650px){
+  #mercedes, #bentley{
+    width: 170px;
+  }
 }

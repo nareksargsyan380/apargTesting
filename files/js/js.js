@@ -1,8 +1,6 @@
 // getting photos from flickr
 function someFunc(){
 if(document.getElementById("myInput").value == "mercedes"){
-      alert("Mercedes")
-
       $(function(){
         //JSON, .getJSON()
         var flickApiUrl = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?"
@@ -48,7 +46,6 @@ if(document.getElementById("myInput").value == "mercedes"){
         });
       });
 }else if (document.getElementById("myInput").value == "bentley") {
-      alert("Bentley")
       $(function(){
         //JSON, .getJSON()
         var flickApiUrl = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?"
@@ -100,12 +97,7 @@ if(document.getElementById("myInput").value == "mercedes"){
 // search clicking
 document.getElementById("searchBtn").onclick = someFunc;
 
-// message after sorting
-$(document).ready(function message(){
-  if($('.result img').length == 5){
-  alert("You are succesfully sorted photos by brands..!");
-  }
-})
-// if($('.result img').length == 5){
-// alert("You are succesfully sorted photos by brands..!");
-// }
+// showing photos by clicking on box
+function showPics(){
+  $(".result").css("display", "block");
+};
